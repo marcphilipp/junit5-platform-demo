@@ -1,0 +1,37 @@
+buildscript {
+    ext.kotlin_version = '1.2.40' // For IDEA
+}
+
+plugins {
+    id 'java-library'
+    id 'org.jetbrains.kotlin.jvm' version '1.2.40'
+}
+
+repositories {
+    mavenCentral()
+    maven { url 'http://dl.bintray.com/jetbrains/spek' }
+}
+
+test {
+    useJUnitPlatform()
+}
+
+dependencies {
+
+    // JUnit Vintage
+    testCompile 'junit:junit:4.12'
+    testRuntime 'org.junit.vintage:junit-vintage-engine:5.2.0-RC1'
+
+    // JUnit Jupiter
+    testCompile 'org.junit.jupiter:junit-jupiter-api:5.2.0-RC1'
+    testRuntime 'org.junit.jupiter:junit-jupiter-engine:5.2.0-RC1'
+
+    // jqwik
+    testCompile 'net.jqwik:jqwik:0.8.10'
+
+    // Spek
+    testCompile 'org.jetbrains.spek:spek-api:1.1.5'
+    testRuntime 'org.jetbrains.spek:spek-junit-platform-engine:1.1.5'
+    testCompile 'org.jetbrains.kotlin:kotlin-stdlib'
+    testCompile 'org.jetbrains.kotlin:kotlin-reflect'
+}
