@@ -14,13 +14,15 @@ tasks.test {
 }
 
 dependencies {
+    
+    testImplementation(enforcedPlatform("org.junit:junit-bom:5.4.2"))
 
     // JUnit Vintage
     testImplementation("junit:junit:4.12")
-    testRuntimeOnly("org.junit.vintage:junit-vintage-engine:5.4.2")
+    testRuntimeOnly("org.junit.vintage:junit-vintage-engine")
 
     // JUnit Jupiter
-    testImplementation("org.junit.jupiter:junit-jupiter:5.4.2")
+    testImplementation("org.junit.jupiter:junit-jupiter")
 
     // jqwik
     testImplementation("net.jqwik:jqwik:0.9.1")
