@@ -25,7 +25,7 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter")
 
     // jqwik
-    testImplementation("net.jqwik:jqwik:0.9.1")
+    testImplementation("net.jqwik:jqwik:1.1.2")
 
     // Spek
     testImplementation("org.jetbrains.spek:spek-api:1.1.5")
