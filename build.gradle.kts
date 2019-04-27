@@ -17,11 +17,10 @@ dependencies {
 
     // JUnit Vintage
     testImplementation("junit:junit:4.12")
-    testRuntimeOnly("org.junit.vintage:junit-vintage-engine:5.3.1")
+    testRuntimeOnly("org.junit.vintage:junit-vintage-engine:5.4.2")
 
     // JUnit Jupiter
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.3.1")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.3.1")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.4.2")
 
     // jqwik
     testImplementation("net.jqwik:jqwik:0.9.1")
@@ -29,7 +28,7 @@ dependencies {
     // Spek
     testImplementation("org.jetbrains.spek:spek-api:1.1.5")
     testRuntimeOnly("org.jetbrains.spek:spek-junit-platform-engine:1.1.5")
-    testImplementation("org.jetbrains.kotlin:kotlin-stdlib")
-    testImplementation("org.jetbrains.kotlin:kotlin-reflect")
+    testImplementation(kotlin("stdlib-jdk8"))
+    testImplementation(kotlin("reflect"))
 
 }
